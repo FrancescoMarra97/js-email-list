@@ -14,14 +14,14 @@ e stamparli in pagina all'interno di una lista.
         console.error(error);
     }); */
 
-emailList=[];
+const emailList=[];
 
 for (let i = 0; i < 10; i++) {
     fetch("https://flynn.boolean.careers/exercises/api/random/mail")
     .then(response => response.json())
     .then(data => {
         console.log(data);
-
+        emailList.push(data)
     })
     .catch(error => {
         console.error(error);
@@ -29,3 +29,5 @@ for (let i = 0; i < 10; i++) {
     
     
 }
+
+console.log(emailList);
